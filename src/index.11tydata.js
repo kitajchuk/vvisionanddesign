@@ -1,9 +1,6 @@
+import { readPublicImageDirectory } from "../lib/utils.js";
+
 export default async function () {
-  return {
-    items: [
-      "one",
-      "two",
-      "three",
-    ],
-  };
+  const images = await readPublicImageDirectory();
+  return { images };
 }

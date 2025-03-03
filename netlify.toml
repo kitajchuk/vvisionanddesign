@@ -1,5 +1,5 @@
 [build]
-command = "npm run build"
+command = "npm run download-s3 && npm run build"
 publish = "_site"
 
 # [[headers]]

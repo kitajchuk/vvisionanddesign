@@ -7,7 +7,7 @@ node_modules
 .vscode
 .env*
 .cache
-scripts
 # Local Netlify folder
 .netlify
 data
+public/images

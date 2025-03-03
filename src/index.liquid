@@ -1,0 +1,22 @@
+---
+layout: "layout.liquid"
+---
+
+<ul class="flex flex-col items-center justify-center gap-16">
+  {% for image in images %}
+    {% assign loading = "lazy" %}
+    {% if forloop.first %}
+      {% assign loading = "eager" %}
+    {% endif %}
+    <li class="flex justify-center w-full">
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.alt }}"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        loading="{{ loading }}"
+        class="w-full {% if image.orientation == 'portrait' %}max-w-[768px]{% else %}max-w-[1440px]{% endif %}"
+        data-orientation="{{ image.orientation }}" />
+    </li>
+  {% endfor %}
+</ul>

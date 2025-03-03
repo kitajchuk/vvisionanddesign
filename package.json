@@ -8,7 +8,13 @@
     "predev": "rm -rf ./_site",
     "dev": "npx @11ty/eleventy --serve",
     "prebuild": "rm -rf ./_site",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "premakewebp": "rm -rf ./public/images/*",
+    "upload": "env-cmd --file .env npm run upload-s3",
+    "upload-s3": "aws s3 sync ./public/images s3://${VV_S3_REPOSITORY}/public/images --exclude '*.DS_Store' --delete",
+    "download": "env-cmd --file .env npm run download-s3",
+    "download-s3": "node ./scripts/aws.js",
+    "makewebp": "node scripts/webp.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +34,13 @@
     "@11ty/eleventy-plugin-vite": "^6.0.0",
     "@tailwindcss/vite": "^4.0.9",
     "image-size": "^2.0.0",
-    "mkdirp": "^3.0.1",
     "sharp": "^0.33.5",
     "shelljs": "^0.8.5",
     "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1692.0",
+    "env-cmd": "^10.1.0",
+    "mkdirp": "^3.0.1"
   }
 }

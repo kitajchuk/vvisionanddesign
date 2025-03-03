@@ -2,3 +2,8 @@
 
 /* tailwindcss layer order */
 /* @layer theme, base, components, utilities; */
+
+@theme {
+  --font-sans: "Afacad", sans-serif;
+  --breakpoint-xsm: 30rem;
+}
