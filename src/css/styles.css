@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* tailwindcss layer order */
+/* @layer theme, base, components, utilities; */

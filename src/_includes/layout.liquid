@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" class="bg-black text-white text-center">
+  <head>
+    {% render "metadata"
+      , site: site %}
+    <title>V Vision by Design</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="px-4 py-4 sm:py-5 sm:px-8">
+      <h1>V Vision by Design</h1>
+    </header>
+    <main class="flex flex-col items-center justify-center gap-16 py-16 px-6 sm:py-24 sm:px-8">
+      {{ content }}
+    </main>
+    <footer class="py-16 px-6 sm:py-24 sm:px-8">
+      <p>Copyright 2025 V Vision by Design</p>
+    </footer>
+  </body>
+</html>

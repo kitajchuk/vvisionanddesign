@@ -1,0 +1,13 @@
+_site
+logs
+*.log
+npm-debug.log*
+node_modules
+*.local
+.vscode
+.env*
+.cache
+scripts
+# Local Netlify folder
+.netlify
+data
