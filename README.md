@@ -18,5 +18,5 @@ A static site using:
 # Todo
 
 - [ ] Sync Proton Drive locally with [rclone](https://rclone.org/protondrive/)
-- [ ] Logo
-- [ ] Web app Metadata
+- [ ] Optimize a few oversized images
+- [ ] Implement `srcset` with `sizes`
