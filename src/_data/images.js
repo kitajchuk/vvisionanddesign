@@ -1,6 +1,6 @@
-import { readPublicImageDirectory } from "../lib/utils.js";
+import { readPublicImageDirectory } from "../../lib/utils.js";
 
 export default async function () {
   const images = await readPublicImageDirectory();
-  return { images };
+  return images;
 }

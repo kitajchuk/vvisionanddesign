@@ -20,4 +20,3 @@ A static site using:
 - [ ] Sync Proton Drive locally with [rclone](https://rclone.org/protondrive/)
 - [ ] Optimize a few oversized images
 - [ ] Implement `srcset` with `sizes`
-- [ ] Individual photo pages

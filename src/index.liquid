@@ -9,14 +9,15 @@ layout: "layout.liquid"
       {% assign loading = "eager" %}
     {% endif %}
     <li class="flex justify-center w-full">
-      <img
-        src="{{ image.src }}"
-        alt="{{ image.alt }}"
-        width="{{ image.width }}"
-        height="{{ image.height }}"
-        loading="{{ loading }}"
-        class="w-full {% if image.orientation == 'portrait' %}max-w-[768px]{% else %}max-w-[1440px]{% endif %}"
-        data-orientation="{{ image.orientation }}" />
+      <a href="/photo/{{ image.uid }}/">
+        <img
+          src="{{ image.src }}"
+          alt="{{ image.alt }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="{{ loading }}"
+          class="w-full {% if image.orientation == 'portrait' %}max-w-[768px]{% else %}max-w-[1440px]{% endif %}" />
+      </a>
     </li>
   {% endfor %}
 </ul>

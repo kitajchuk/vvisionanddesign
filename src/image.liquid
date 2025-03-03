@@ -1,0 +1,20 @@
+---
+layout: layout.liquid
+pagination:
+  data: images
+  size: 1
+  alias: image
+permalink: "/photo/{{ image.uid }}/"
+---
+
+<div class="flex flex-col items-center justify-center">
+  <div class="flex justify-center w-full">
+    <img
+      src="{{ image.src }}"
+      alt="{{ image.alt }}"
+      width="{{ image.width }}"
+      height="{{ image.height }}"
+      loading="eager"
+      class="w-full {% if image.orientation == 'portrait' %}max-w-[768px]{% else %}max-w-[1440px]{% endif %}" />
+  </div>
+</div>

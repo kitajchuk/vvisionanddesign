@@ -8,11 +8,12 @@ const shellOpts = { silent: true };
 // The width for the `webp` versions
 const imgMaxPortrait = 1440;
 const imgMaxLandscape = 1920;
-const imgMinPortrait = 1200;
-const imgMinLandscape = 1440;
+
+const imageBaseName = "vvisionbydesign";
 
 // Viable local source image formats
 const rImage = /\.(jpg|jpeg)$/;
+const rFilename = /data\/(.*?)\.(jpg|jpeg)$/;
 
 // Shell out to `find` for quick recurse
 const files = shell
@@ -21,9 +22,14 @@ const files = shell
   .filter((f) => rImage.test(f));
 
 // Process each file for Next's public directory
-files.forEach(async (file) => {
+files.forEach(async (file, index) => {
   // This is the file we will write as `webp` version
-  const pubFile = file.replace("./data", "public/images");
+  const fileName = file.match(rFilename)[1];
+  const newFileName = `${imageBaseName}-${index}`;
+  const pubFile = file.replace(
+    `./data/${fileName}`,
+    `public/images/${newFileName}`,
+  );
   const outFile = pubFile.replace(rImage, ".webp");
 
   const metadata = await sharp(file).metadata();
