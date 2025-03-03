@@ -1,0 +1,15 @@
+_site
+logs
+*.log
+npm-debug.log*
+node_modules
+*.local
+.vscode
+.env*
+.cache
+# Local Netlify folder
+.netlify
+data
+public/images
+*.html
+*.liquid

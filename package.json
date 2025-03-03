@@ -4,6 +4,7 @@
   "description": "Photography portfolio for V Vision by Design",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky",
     "start": "netlify dev",
     "predev": "rm -rf ./_site",
     "dev": "npx @11ty/eleventy --serve",
@@ -41,6 +42,13 @@
   "devDependencies": {
     "aws-sdk": "^2.1692.0",
     "env-cmd": "^10.1.0",
-    "mkdirp": "^3.0.1"
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-toml": "^2.0.2"
+  },
+  "lint-staged": {
+    "*.{js,mjs,css,toml,md,json}": "prettier --write"
   }
 }
