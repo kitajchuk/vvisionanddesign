@@ -4,7 +4,7 @@
   "description": "Photography portfolio for V Vision by Design",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
+    "start": "netlify dev",
     "predev": "rm -rf ./_site",
     "dev": "npx @11ty/eleventy --serve",
     "prebuild": "rm -rf ./_site",
