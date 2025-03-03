@@ -2,7 +2,7 @@
 layout: "layout.liquid"
 ---
 
-<ul class="flex flex-col items-center justify-center gap-16">
+<ul class="flex flex-col items-center justify-center gap-6 md:gap-16">
   {% for image in images %}
     {% assign loading = "lazy" %}
     {% if forloop.first %}
