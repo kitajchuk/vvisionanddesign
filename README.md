@@ -7,7 +7,7 @@
 
 > Website for V Vision and Design Photography
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0c6d6de6-87c3-430d-b815-b686bbd430b3/deploy-status)](https://app.netlify.com/sites/vvisionandbydesign/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0c6d6de6-87c3-430d-b815-b686bbd430b3/deploy-status)](https://app.netlify.com/sites/vvisionanddesign/deploys)
 
 A static site using:
 
