@@ -1,5 +1,6 @@
 export default {
-  title: "V Vision by Design Photography",
-  description: "V Vision by Design Photography portfolio for Valerie Kitajchuk",
-  url: "https://vvisiondesign.com",
+  title: "V Vision and Design Photography",
+  description:
+    "V Vision and Design Photography portfolio for Valerie Kitajchuk",
+  url: "https://vvisionanddesignphotography.com",
 };
