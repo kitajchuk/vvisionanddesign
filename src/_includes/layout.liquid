@@ -3,15 +3,15 @@
   <head>
     {% render "metadata"
       , site: site %}
-    <title>V Vision by Design</title>
+    <title>V Vision and Design</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <header class="px-4 py-4 md:py-5 md:px-8 sticky top-0 bg-black/90 backdrop-blur-sm">
       <a href="/">
         <h1 class="text-center text-3xl md:text-4xl uppercase flex flex-col items-center justify-center gap-1">
-          <span class="">V Vision by Design</span>
-          <span class="text-xs tracking-[1.05rem] -mr-[1.05rem] md:text-sm md:tracking-[1.3rem] md:-mr-[1.25rem]">Photography</span>
+          <span class="">V Vision and Design</span>
+          <span class="text-xs tracking-[1.23rem] -mr-[1.23rem] md:text-sm md:tracking-[1.5rem] md:-mr-[1.45rem]">Photography</span>
         </h1>
       </a>
     </header>
@@ -19,7 +19,7 @@
       {{ content }}
     </main>
     <footer class="py-16 px-6 md:py-24 md:px-8">
-      <p class="text-center text-sm uppercase">Copyright 2025 V Vision by Design</p>
+      <p class="text-center text-sm uppercase">Copyright {{ "now" | date: "%Y" }} V Vision and Design</p>
     </footer>
   </body>
 </html>
