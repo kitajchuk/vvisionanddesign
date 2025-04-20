@@ -19,7 +19,8 @@ const rFilename = /data\/(.*?)\.(jpg|jpeg)$/;
 const files = shell
   .exec(shellCmd, shellOpts)
   .stdout.split("\n")
-  .filter((f) => rImage.test(f));
+  .filter((f) => rImage.test(f))
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 
 // Process each file for Next's public directory
 files.forEach(async (file, index) => {
