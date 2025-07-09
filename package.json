@@ -15,7 +15,9 @@
     "upload-s3": "aws s3 sync ./public/images s3://${VV_S3_REPOSITORY}/public/images --exclude '*.DS_Store' --delete",
     "download": "env-cmd --file .env npm run download-s3",
     "download-s3": "node ./scripts/aws.js",
-    "makewebp": "node scripts/webp.js"
+    "makewebp": "node scripts/webp.js",
+    "deploy": "npm run makewebp && npm run upload && npm run deploy-netlify",
+    "deploy-netlify": "env-cmd --file .env sh -c 'curl -X POST -d {} ${VV_BUILD_HOOK}'"
   },
   "repository": {
     "type": "git",
